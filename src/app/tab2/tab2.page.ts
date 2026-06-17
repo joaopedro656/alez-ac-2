@@ -9,7 +9,7 @@ import { ISerie } from '../model/ISerie'
 })
 export class Tab2Page {
 
-  constructor() {}
+  constructor(public router: Router) {}
 
   listaSeries: ISerie[] = [
     {
@@ -32,5 +32,8 @@ export class Tab2Page {
       pagina: '/op',
       favorito: false
     }
-  ]
+  ];
+  exibirSerie(serie: ISerie){
+    const navigation
+  }
 }
