@@ -1,9 +1,5 @@
-export interface IFilme {
+export interface IAtor {
     nome: string;
     Nascimento: string;
-    classificacao: number;
-    cartaz: string;
-    generos: string[];
-    pagina?: string;
-    favorito: boolean;
+    filmes_feitos: string;
 }
