@@ -1,4 +1,4 @@
-import { NavigationExtras } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { ISerie } from '../model/ISerie'
 @Component({

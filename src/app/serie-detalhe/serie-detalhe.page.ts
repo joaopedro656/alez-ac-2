@@ -1,4 +1,7 @@
+import { Router } from '@angular/router'
+import { ISerie } from './../model/ISerie'
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-serie-detalhe',
@@ -6,10 +9,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./serie-detalhe.page.scss'],
 })
 export class SerieDetalhePage implements OnInit {
-
-  constructor() { }
-
+  serie: any;
+  constructor(private route: ActivateRoute, private router: Router) { }
   ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      const getNav = this.router.getCurrentNavigation();
+      if (getNav?.extras.state){
+        this.serie = getNav.extras.state['paramSerie']
+      }
+    })
   }
 
 }
