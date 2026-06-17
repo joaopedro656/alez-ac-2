@@ -21,10 +21,7 @@
         <ion-label class="ion-text-wrap">
           <div>
            <h1>{{ ator.nome }}</h1>
-           <p>{{ ator.anos }}</p>
-           <ion-badge color="medium" *ngfor="let genero of ator.generos">
-            {{ genero }}
-           </ion-badge>
+           <p>{{ ator.nascimento }}</p>
            <ion-icon name="star" [color]="ator.favorito===true ? 'warning' : ('light')"></ion-icon>
           </div>
         </ion-label>

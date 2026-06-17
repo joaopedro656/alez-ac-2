@@ -1,5 +1,6 @@
 export interface IAtor {
     nome: string;
-    Nascimento: string;
+    nascimento: string;
     filmes_feitos: string;
+    favorito: boolean
 }

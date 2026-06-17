@@ -15,23 +15,27 @@ export class Tab3Page {
     listaAtores: IAtor[] = [
         {
             nome: 'Marlon Brando',
-            Nascimento: '03/04/1924',
+            nascimento: '03/04/1924',
             filmes_feitos: 'O Poderoso Chefão, Apocalypse Now, O Último Tango em Paris',
+            favorito: true
         },
         {
             nome: 'Leonardo DiCaprio',
-            Nascimento: '11/11/1974',
+            nascimento: '11/11/1974',
             filmes_feitos: 'Titanic, A Origem, O Lobo de Wall Street',
+            favorito: false
         },
         {
             nome: 'Morgan Freeman',
-            Nascimento: '01/06/1937',
+            nascimento: '01/06/1937',
             filmes_feitos: 'Um Sonho de Liberdade, Invictus, Batman: O Cavaleiro das Trevas',
+            favorito: false
         },
         {
             nome: 'Scarlett Johansson',
-            Nascimento: '22/11/1984',
+            nascimento: '22/11/1984',
             filmes_feitos: 'Lost in Translation, Vingadores, Lucy',
+            favorito: false
         }
     ];
     exibirAtor(ator: IAtor){
