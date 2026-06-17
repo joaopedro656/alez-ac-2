@@ -34,6 +34,7 @@ export class Tab2Page {
     }
   ];
   exibirSerie(serie: ISerie){
-    const navigation
+    const navigationExtras: NavigationExtras = {state:{paramSeries:serie}};
+    this.router.navigate(['serie-detalhe'],navigationExtras);
   }
 }
