@@ -1,4 +1,7 @@
+import { Router } from '@angular/router'
 import { Component, OnInit } from '@angular/core';
+import { IAtor } from './../model/IAtor'
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-ator-detalhe',
@@ -7,10 +10,15 @@ import { Component, OnInit } from '@angular/core';
   standalone: false
 })
 export class AtorDetalhePage implements OnInit {
-
-  constructor() { }
-
+ator: any;
+  constructor(private route: ActivatedRoute, private router: Router) { }
   ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      const getNav = this.router.getCurrentNavigation();
+      if (getNav?.extras.state){
+        this.ator = getNav.extras.state['paramAtor']
+      }
+    })
   }
 
 }
