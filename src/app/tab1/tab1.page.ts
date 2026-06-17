@@ -18,7 +18,7 @@ export class Tab1Page {
             lancamento: '15/04/1972',
             duracao: '2h 55m',
             classificacao: 9,
-            cartaz: 'https://upload.wikimedia.org/wikipedia/pt/2/2b/The_Godfather.jpg',
+            cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_face/oJagOzBu9Rdd9BrciseCm3U3MCU.jpg',
             generos: ['Crime', 'Drama'],
             pagina: '/O_Poderoso_Chefão',
             favorito: true
@@ -28,7 +28,7 @@ export class Tab1Page {
             lancamento: '20/12/2003',
             duracao: '2h 40m',
             classificacao: 8,
-            cartaz: 'https://upload.wikimedia.org/wikipedia/pt/3/3b/The_Return_of_the_King.jpg',
+            cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_face/rU4oIKv5I4C59DpcXKmT7kNwGI0.jpg',
             generos: ['Aventura', 'Fantasia'],
             pagina: '/O_Senhor_dos_Anéis_-_O_Retorno_do_Rei',
             favorito: false
@@ -38,7 +38,7 @@ export class Tab1Page {
             lancamento: '07/02/1994',
             duracao: '2h 34m',
             classificacao: 8,
-            cartaz: 'https://upload.wikimedia.org/wikipedia/pt/8/8b/Pulp_Fiction.jpg',
+            cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_face/tptjnB2LDbuUWya9Cx5sQtv5hqb.jpg',
             generos: ['Crime', 'Drama'],
             pagina: '/Pulp_Fiction_-_Tempo_de_Violência',
             favorito:false
@@ -48,7 +48,7 @@ export class Tab1Page {
             lancamento: '16/07/2010',
             duracao: '2h 28m',
             classificacao: 8,
-            cartaz: 'https://upload.wikimedia.org/wikipedia/pt/2/2e/Inception.jpg',
+            cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_face/9e3Dz7aCANy5aRUQF745IlNloJ1.jpg',
             generos: ['Ação', 'Ficção Científica'],
             pagina: '/A_Origem',
             favorito: true
@@ -58,7 +58,7 @@ export class Tab1Page {
             lancamento: '15/10/1999',
             duracao: '2h 19m',
             classificacao: 8,
-            cartaz: 'https://upload.wikimedia.org/wikipedia/pt/a/a7/Fight_Club.jpg',
+            cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_face/mCICnh7QBH0gzYaTQChBDDVIKdm.jpg',
             generos: ['Drama', 'Thriller'],
             pagina: '/Clube_da_Luta',
             favorito: false

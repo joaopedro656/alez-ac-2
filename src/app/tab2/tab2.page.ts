@@ -19,7 +19,7 @@ export class Tab2Page {
       anos: '2010-2023',
       episodios: '177',
       classificacao: 7,
-      cartaz: '.',
+      cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_face/9lb02gTh4LLB17yAEXFd4C3R4JP.jpg',
       generos: ['Terror', 'Drama', 'Apocalipse'],
       pagina: '/twd',
       favorito: false
@@ -29,7 +29,7 @@ export class Tab2Page {
       anos: '1999-',
       episodios: '1060',
       classificacao: 10,
-      cartaz: '.',
+      cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_face/9ltisibeD4gzqjM1AzmQwCdyirQ.jpg',
       generos: ['Ação', 'Aventura', 'Fantasia', 'Comédia'],
       pagina: '/op',
       favorito: false

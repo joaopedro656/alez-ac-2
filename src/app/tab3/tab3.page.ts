@@ -19,28 +19,28 @@ export class Tab3Page {
             nascimento: '03/04/1924',
             filmes_feitos: 'O Poderoso Chefão, Apocalypse Now, O Último Tango em Paris',
             favorito: true,
-            cartaz: 'v'
+            cartaz: 'https://media.themoviedb.org/t/p/w300_and_h450_face/eEHCjqKMWSvQU4bmwhLMsg4RtEr.jpg'
         },
         {
             nome: 'Leonardo DiCaprio',
             nascimento: '11/11/1974',
             filmes_feitos: 'Titanic, A Origem, O Lobo de Wall Street',
             favorito: false,
-            cartaz:'1'
+            cartaz:'https://media.themoviedb.org/t/p/w300_and_h450_face/mkdRcVIQl4WZhDf1vXKWTD7HZrZ.jpg'
         },
         {
             nome: 'Morgan Freeman',
             nascimento: '01/06/1937',
             filmes_feitos: 'Um Sonho de Liberdade, Invictus, Batman: O Cavaleiro das Trevas',
             favorito: false,
-            cartaz: 'v'
+            cartaz: 'https://media.themoviedb.org/t/p/w300_and_h450_face/1ahENoyEgKSbRUd0IsydIff7rt1.jpg'
         },
         {
             nome: 'Scarlett Johansson',
             nascimento: '22/11/1984',
             filmes_feitos: 'Lost in Translation, Vingadores, Lucy',
             favorito: false,
-            cartaz: "dawkda"
+            cartaz: "https://media.themoviedb.org/t/p/w300_and_h450_face/druW5adKddizHNSoPbI0q7Mvn0K.jpg"
         }
     ];
     exibirAtor(ator: IAtor){
