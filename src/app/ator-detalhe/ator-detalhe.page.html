@@ -1,13 +1,25 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>atorDetalhe</ion-title>
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ator.nome}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">atorDetalhe</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content color="light">
+  <ion-card *ngIf="ator">
+    <ion-card-header>
+      <img *ngIf="ator.cartaz" src="{{ator.cartaz}}" />
+      <ion-icon *ngIf="!ator.cartaz" name="videocam-off"></ion-icon>
+    </ion-card-header>
+    
+    <ion-card-content>
+      <h1> {{ator.nome}} </h1>
+      <p>{{ator.nascimento}}</p>
+    </ion-card-content>
+    <ion-item>
+      <ion-badge color="medium" *ngFor="let filme of ator.filmes_feitos">{{filme}}</ion-badge>
+    </ion-item>
+  </ion-card>
 </ion-content>
