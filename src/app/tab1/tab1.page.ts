@@ -9,6 +9,8 @@ import { IFilme } from '../model/IFilme';
       standalone: false
 })
 export class Tab1Page {
+  toastController: any;
+  alertController: any;
 
     constructor(public router: Router) {}
 

@@ -9,6 +9,8 @@ import { ISerie } from '../model/ISerie';
   standalone: false,
 })
 export class Tab2Page {
+  alertController: any;
+  toastController: any;
 
   constructor(public router: Router) {}
 
@@ -40,28 +42,28 @@ export class Tab2Page {
   }
 
 
-  async exibirAlertaFavorito(serie: ISerie) {
+  async exibirAlertaFavorito(serie: ISerie){
     const alert = await this.alertController.create({
-
+      
       header: 'Meus Favoritos',
-      message: 'Deseja realmente favoritar a série?',
+      message: 'Deseja realmente favoritar o filme?',
       buttons: [
         {
           text: 'Cancelar',
           role: 'cancel',
-          handler: () => {
+          handler: () =>{
             serie.favorito=false;
           }
         }, {
           text: 'Sim, favoritar.',
-          handler: () =>{
-            serie.favorito = true;
-            this.apresentarToast;
+          handler: () => {
+            serie.favorito=true;
+            this.apresentarToast();
           }
         }
       ]
     });
-    await
+    await alert.present
   }
 
   async apresentarToast() {
