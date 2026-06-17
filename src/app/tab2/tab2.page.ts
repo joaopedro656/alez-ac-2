@@ -62,7 +62,7 @@ export class Tab2Page {
         }
       ]
     });
-    await alert.present
+    await alert.present()
   }
 
   async apresentarToast() {

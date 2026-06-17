@@ -70,7 +70,7 @@ export class Tab3Page {
             }
           ]
         });
-        await alert.present
+        await alert.present()
       }
     
       async apresentarToast() {
