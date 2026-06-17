@@ -10,8 +10,6 @@ import { AlertController, ToastController } from '@ionic/angular';
       standalone: false
 })
 export class Tab1Page {
-  toastController: any;
-  alertController: any;
 
     constructor(public router : Router , private alertController: AlertController, private toastController: ToastController) {}
     listaFilmes: IFilme[] = [
