@@ -13,10 +13,10 @@
     <ion-item-sliding *ngfor="let ator of listaAtores">
       <ion-item lines="full" (click)="exibirAtor(ator)">
 
-        <ion-tumbnail slot="start">
+        <ion-thumbnail slot="start">
           <img *ngif="ator.cartaz" src="{{ator.cartaz}}" />
           <ion-icon *ngif="!ator.cartaz" name="videocam-off"></ion-icon>
-        </ion-tumbnail>
+        </ion-thumbnail>
 
         <ion-label class="ion-text-wrap">
           <div>

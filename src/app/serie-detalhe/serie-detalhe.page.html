@@ -17,8 +17,8 @@
     <ion-card-content>
       <h1>{{serie.nome}} </h1>
       <p> {{serie.anos}} 
-        <ion-chip [color]="serie.classificacao < 5 ? 'danger' : ((serie.classificacao < 7 ? 'warning' : "success"))"
-        outline>
+        <ion-chip [color]="serie.classificacao < 5 ? 'danger' : ((serie.classificacao < 7 ? 'warning' : 'success'))"
+          outline>
           <ion-label>{{serie.classificacao}}</ion-label>
       </ion-chip>
       </p>
