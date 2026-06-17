@@ -1,6 +1,7 @@
 import { NavigationExtras, Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { ISerie } from '../model/ISerie';
+import { AlertController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab2',
@@ -12,7 +13,7 @@ export class Tab2Page {
   alertController: any;
   toastController: any;
 
-  constructor(public router: Router) {}
+  constructor(public router : Router , private alertController: AlertController, private toastController: ToastController) {}
 
   listaSeries: ISerie[] = [
     {

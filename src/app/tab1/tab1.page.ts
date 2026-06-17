@@ -1,6 +1,7 @@
 import { NavigationExtras, Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { IFilme } from '../model/IFilme';
+import { AlertController, ToastController } from '@ionic/angular';
 
 @Component({
     selector: 'app-tab1',
@@ -12,8 +13,7 @@ export class Tab1Page {
   toastController: any;
   alertController: any;
 
-    constructor(public router: Router) {}
-
+    constructor(public router : Router , private alertController: AlertController, private toastController: ToastController) {}
     listaFilmes: IFilme[] = [
         {
             nome: 'O Poderoso Chefão',

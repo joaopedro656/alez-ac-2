@@ -1,6 +1,7 @@
 import { NavigationExtras, Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { IAtor } from '../model/IAtor';
+import { AlertController, ToastController } from '@ionic/angular';
 
 @Component({
     selector: 'app-tab3',
@@ -9,8 +10,8 @@ import { IAtor } from '../model/IAtor';
       standalone: false
 })
 export class Tab3Page {
-
-    constructor() {}
+    constructor(public router : Router , private alertController: AlertController, private toastController: ToastController) {}
+    
 
     listaAtores: IAtor[] = [
         {
