@@ -9,6 +9,8 @@ import { IFilme } from '../model/IFilme';
       standalone: false
 })
 export class Tab1Page {
+  toastController: any;
+  alertController: any;
 
     constructor(public router: Router) {}
 
@@ -68,4 +70,37 @@ export class Tab1Page {
       const navigationExtras: NavigationExtras = {state:{paramFilme:filme}};
       this.router.navigate(['filme-detalhe'],navigationExtras);
     }
+
+  async exibirAlertaFavorito(filme: IFilme){
+      const alert = await this.alertController.create({
+
+          header:'Meus Favoritos',
+          message: 'Deseja realmente favoritar o filme?',
+          buttons: [
+              {
+                  text: 'Cancelar',
+                  role: 'cancel',
+                  handler: () => {
+                      filme.favorito = false;
+                  }
+              }, {
+                  text: 'Sim, favoritar.',
+                  handler: () => {
+                      filme.favorito=true;
+                      this.apresentarToast();
+                  }
+              }
+          ]
+      });
+      await alert.present();
+  }
+  
+  async apresentarToast(){
+    const toast = await this.toastController.create({
+      message: 'Filme adicionado aos favoritos...',
+      duration: 2000,
+      color: 'success'
+  });
+  toast.present();
+  }
 }

@@ -9,6 +9,8 @@ import { ISerie } from '../model/ISerie';
   standalone: false,
 })
 export class Tab2Page {
+  alertController: any;
+  toastController: any;
 
   constructor(public router: Router) {}
 
@@ -38,37 +40,38 @@ export class Tab2Page {
     const navigationExtras: NavigationExtras = {state:{paramSeries:serie}};
     this.router.navigate(['serie-detalhe'],navigationExtras);
   }
-}
 
-async exibirAlertaFavorito(serie: ISerie) {
-  const alert = await this.alertController.create({
 
-    header: 'Meus Favoritos',
-    message: 'Deseja realmente favoritar a série?',
-    buttons: [
-      {
-        text: 'Cancelar',
-        role: 'cancel',
-        handler: () => {
-          serie.favorito = false;
+  async exibirAlertaFavorito(serie: ISerie){
+    const alert = await this.alertController.create({
+      
+      header: 'Meus Favoritos',
+      message: 'Deseja realmente favoritar a série?',
+      buttons: [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+          handler: () =>{
+            serie.favorito=false;
+          }
+        }, {
+          text: 'Sim, favoritar.',
+          handler: () => {
+            serie.favorito=true;
+            this.apresentarToast();
+          }
         }
-      }, {
-        text: 'Sim, favoritar.',
-        handler: () =>{
-          serie.favorito = true;
-          this.apresentarToast;
-        }
-      }
-    ]
-  });
-  await
-}
+      ]
+    });
+    await alert.present
+  }
 
-async apresentarToast() {
-  const toast = await this.toastController.create({
-    message: 'Série adicionada aos favoritos...',
-    duration: 2000,
-    color: 'success'
-  });
-  toast.present();
+  async apresentarToast() {
+    const toast = await this.toastController.create({
+      message: 'Série adicionada aos favoritos...',
+      duration: 2000,
+      color: 'success'
+    });
+    toast.present();
+  }
 }
