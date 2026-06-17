@@ -10,8 +10,6 @@ import { AlertController, ToastController } from '@ionic/angular';
   standalone: false,
 })
 export class Tab2Page {
-  alertController: any;
-  toastController: any;
 
   constructor(public router : Router , private alertController: AlertController, private toastController: ToastController) {}
 
