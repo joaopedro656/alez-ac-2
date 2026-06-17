@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-ator-detalhe',
   templateUrl: './ator-detalhe.page.html',
   styleUrls: ['./ator-detalhe.page.scss'],
+  standalone: false
 })
 export class AtorDetalhePage implements OnInit {
 

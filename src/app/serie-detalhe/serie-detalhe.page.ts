@@ -7,10 +7,11 @@ import { ActivatedRoute } from '@angular/router';
   selector: 'app-serie-detalhe',
   templateUrl: './serie-detalhe.page.html',
   styleUrls: ['./serie-detalhe.page.scss'],
+  standalone: false
 })
 export class SerieDetalhePage implements OnInit {
   serie: any;
-  constructor(private route: ActivateRoute, private router: Router) { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       const getNav = this.router.getCurrentNavigation();
