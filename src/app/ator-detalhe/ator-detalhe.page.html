@@ -16,7 +16,12 @@
     
     <ion-card-content>
       <h1> {{ator.nome}} </h1>
-      <p>{{ator.nascimento}}</p>
+      <p>{{ator.nascimento}}
+                <ion-chip [color]="ator.classificacao < 5 ? 'danger' : ((ator.classificacao < 7 ? 'warning' : 'success'))"
+          outline>
+          <ion-label>{{ ator.classificacao }}</ion-label>
+        </ion-chip>
+      </p>
     </ion-card-content>
     <ion-item>
       <ion-badge color="medium" *ngFor="let filme of ator.filmes_feitos">{{filme}}</ion-badge>
