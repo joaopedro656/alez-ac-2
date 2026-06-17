@@ -1,8 +1,8 @@
-import { NavigationExtras, router } from '@angular/router';
-import { component } from '@angular/core';
+import { NavigationExtras, Router } from '@angular/router';
+import { Component } from '@angular/core';
 import { IFilme } from '../model/IFilme';
 
-@component({
+@Component({
     selector: 'app-tab1',
     templateUrl: 'tab1.page.html',
     styleUrls: ['tab1.page.scss']
@@ -20,7 +20,7 @@ export class Tab1Page {
             cartaz: 'https://upload.wikimedia.org/wikipedia/pt/2/2b/The_Godfather.jpg',
             generos: ['Crime', 'Drama'],
             pagina: '/O_Poderoso_Chefão',
-            favirito: true
+            favorito: true
         },
         {
             nome: 'O Senhor dos Anéis: O Retorno do Rei',
@@ -41,6 +41,26 @@ export class Tab1Page {
             generos: ['Crime', 'Drama'],
             pagina: '/Pulp_Fiction_-_Tempo_de_Violência',
             favorito:false
+        },
+        {
+            nome: 'A Origem',
+            lancamento: '16/07/2010',
+            duracao: '2h 28m',
+            classificacao: 8,
+            cartaz: 'https://upload.wikimedia.org/wikipedia/pt/2/2e/Inception.jpg',
+            generos: ['Ação', 'Ficção Científica'],
+            pagina: '/A_Origem',
+            favorito: true
+        },
+        {
+            nome: 'Clube da Luta',
+            lancamento: '15/10/1999',
+            duracao: '2h 19m',
+            classificacao: 8,
+            cartaz: 'https://upload.wikimedia.org/wikipedia/pt/a/a7/Fight_Club.jpg',
+            generos: ['Drama', 'Thriller'],
+            pagina: '/Clube_da_Luta',
+            favorito: false
         }
     ];
 }
