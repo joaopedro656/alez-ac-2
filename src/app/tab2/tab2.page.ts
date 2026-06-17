@@ -50,7 +50,7 @@ async exibirAlertaFavorito(serie: ISerie) {
         text: 'Cancelar',
         role: 'cancel',
         handler: () => {
-          serie.favorito=false;
+          serie.favorito = false;
         }
       }, {
         text: 'Sim, favoritar.',

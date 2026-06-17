@@ -8,10 +8,10 @@
 </ion-header>
 
 <ion-content color="light">
-  <ion-card *ngif="filme">
+  <ion-card *ngIf="filme">
     <ion-card-header>
-      <img *ngif="filme.cartaz" src="{{filme.cartaz}}" />
-      <ion-icon *ngif="!filme.cartaz" name="videocam-off"></ion-icon>
+      <img *ngIf="filme.cartaz" src="{{filme.cartaz}}" />
+      <ion-icon *ngIf="!filme.cartaz" name="videocam-off"></ion-icon>
     </ion-card-header>
     
     <ion-card-content>
