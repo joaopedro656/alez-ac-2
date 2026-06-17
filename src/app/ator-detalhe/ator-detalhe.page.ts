@@ -16,7 +16,7 @@ ator: any;
     this.route.queryParams.subscribe(params => {
       const getNav = this.router.getCurrentNavigation();
       if (getNav?.extras.state){
-        this.ator = getNav.extras.state['paramAtor']
+        this.ator = getNav.extras.state['paramAtores']
       }
     })
   }
