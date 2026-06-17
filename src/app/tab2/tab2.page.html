@@ -8,21 +8,21 @@
 
 <ion-content [fullscreen]="true">
 
-  <ion-list *ngif="listaSeries">
+  <ion-list *ngIf="listaSeries">
 
-    <ion-item-sliding *ngfor="let serie of listaSeries">
+    <ion-item-sliding *ngFor="let serie of listaSeries">
       <ion-item lines="full" (click)="exibirSerie(serie)">
 
         <ion-thumbnail slot="start">
-          <img *ngif="serie.cartaz" src="{{serie.cartaz}}" />
-          <ion-icon *ngif="!serie.cartaz" name="videocam-off"></ion-icon>
+          <img *ngIf="serie.cartaz" src="{{serie.cartaz}}" />
+          <ion-icon *ngIf="!serie.cartaz" name="videocam-off"></ion-icon>
         </ion-thumbnail>
 
         <ion-label class="ion-text-wrap">
           <div>
            <h1>{{ serie.nome }}</h1>
            <p>{{ serie.anos }}</p>
-           <ion-badge color="medium" *ngfor="let genero of serie.generos">
+           <ion-badge color="medium" *ngFor="let genero of serie.generos">
             {{ genero }}
            </ion-badge>
            <ion-icon name="star" [color]="serie.favorito===true ? 'warning' : ('light')"></ion-icon>

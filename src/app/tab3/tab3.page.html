@@ -8,14 +8,14 @@
 
 <ion-content [fullscreen]="true">
 
-  <ion-list *ngif="listaAtores">
+  <ion-list *ngIf="listaAtores">
 
-    <ion-item-sliding *ngfor="let ator of listaAtores">
+    <ion-item-sliding *ngFor="let ator of listaAtores">
       <ion-item lines="full" (click)="exibirAtor(ator)">
 
         <ion-thumbnail slot="start">
-          <img *ngif="ator.cartaz" src="{{ator.cartaz}}" />
-          <ion-icon *ngif="!ator.cartaz" name="videocam-off"></ion-icon>
+          <img *ngIf="ator.cartaz" src="{{ator.cartaz}}" />
+          <ion-icon *ngIf="!ator.cartaz" name="videocam-off"></ion-icon>
         </ion-thumbnail>
 
         <ion-label class="ion-text-wrap">
@@ -25,11 +25,6 @@
            <ion-icon name="star" [color]="ator.favorito===true ? 'warning' : ('light')"></ion-icon>
           </div>
         </ion-label>
-
-        <ion-chip [color]="ator.classificacao < 5 ? 'danger' : ((ator.classificacao < 7 ? 'warning' : 'success'))"
-        outline>
-          <ion-label>{{ ator.classificacao }}</ion-label>
-        </ion-chip>
       </ion-item>
 
       <ion-item-options side="start">

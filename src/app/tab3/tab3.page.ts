@@ -18,25 +18,29 @@ export class Tab3Page {
             nome: 'Marlon Brando',
             nascimento: '03/04/1924',
             filmes_feitos: 'O Poderoso Chefão, Apocalypse Now, O Último Tango em Paris',
-            favorito: true
+            favorito: true,
+            cartaz: 'v'
         },
         {
             nome: 'Leonardo DiCaprio',
             nascimento: '11/11/1974',
             filmes_feitos: 'Titanic, A Origem, O Lobo de Wall Street',
-            favorito: false
+            favorito: false,
+            cartaz:'1'
         },
         {
             nome: 'Morgan Freeman',
             nascimento: '01/06/1937',
             filmes_feitos: 'Um Sonho de Liberdade, Invictus, Batman: O Cavaleiro das Trevas',
-            favorito: false
+            favorito: false,
+            cartaz: 'v'
         },
         {
             nome: 'Scarlett Johansson',
             nascimento: '22/11/1984',
             filmes_feitos: 'Lost in Translation, Vingadores, Lucy',
-            favorito: false
+            favorito: false,
+            cartaz: "dawkda"
         }
     ];
     exibirAtor(ator: IAtor){

@@ -8,21 +8,21 @@
 
 <ion-content [fullscreen]="true">
 
-  <ion-list *ngif="listaFilmes">
+  <ion-list *ngIf="listaFilmes">
 
-    <ion-item-sliding *ngfor="let filme of listaFilmes">
+    <ion-item-sliding *ngFor="let filme of listaFilmes">
       <ion-item lines="full" (click)="exibirFilme(filme)">
         
         <ion-thumbnail slot="start">
-          <img *ngif="filme.cartaz" src="{{filme.cartaz}}" />
-          <ion-icon *ngif="!filme.cartaz" name="videocam-off"></ion-icon>
+          <img *ngIf="filme.cartaz" src="{{filme.cartaz}}" />
+          <ion-icon *ngIf="!filme.cartaz" name="videocam-off"></ion-icon>
         </ion-thumbnail>
 
         <ion-label class="ion-text-wrap">
           <div>
            <h1>{{ filme.nome }}</h1>
            <p>{{ filme.lancamento }}</p>
-           <ion-badge color="medium" *ngfor="let genero of filme.generos">
+           <ion-badge color="medium" *ngFor="let genero of filme.generos">
             {{ genero }}
            </ion-badge>
            <ion-icon name="star" [color]="filme.favorito===true ? 'warning' : ('light')"></ion-icon>
