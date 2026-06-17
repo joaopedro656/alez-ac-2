@@ -11,7 +11,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SerieDetalhePage implements OnInit {
   serie: any;
+
   constructor(private route: ActivatedRoute, private router: Router) { }
+  
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       const getNav = this.router.getCurrentNavigation();

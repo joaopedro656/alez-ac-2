@@ -18,7 +18,7 @@ export class Tab2Page {
       nome: 'The Walking Dead',
       anos: '2010-2023',
       episodios: '177',
-      classificacao: 18,
+      classificacao: 7,
       cartaz: '.',
       generos: ['Terror', 'Drama', 'Apocalipse'],
       pagina: '/twd',
@@ -28,7 +28,7 @@ export class Tab2Page {
       nome: 'One Piece',
       anos: '1999-',
       episodios: '1060',
-      classificacao: 12,
+      classificacao: 10,
       cartaz: '.',
       generos: ['Ação', 'Aventura', 'Fantasia', 'Comédia'],
       pagina: '/op',
@@ -36,7 +36,7 @@ export class Tab2Page {
     }
   ];
   exibirSerie(serie: ISerie){
-    const navigationExtras: NavigationExtras = {state:{paramSeries:serie}};
+    const navigationExtras: NavigationExtras = {state:{paramSerie:serie}};
     this.router.navigate(['serie-detalhe'],navigationExtras);
   }
 

@@ -3,7 +3,6 @@ import { IFilme } from './../model/IFilme';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-
 @Component({
     selector: 'app-filme-detalhe',
     templateUrl: './filme-detalhe.page.html',
