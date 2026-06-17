@@ -15,22 +15,22 @@ export class Tab2Page {
     {
       nome: 'The Walking Dead',
       anos: '2010-2023',
-      episodios: '177';
-      classificacao: '18';
-      cartaz: '.';
+      episodios: '177',
+      classificacao: '18',
+      cartaz: '.',
       generos: ['Terror', 'Drama', 'Apocalipse'],
-      pagina?: '/twd',
-      favorito: 'false'
+      pagina: '/twd',
+      favorito: false
     },
     {
       nome: 'One Piece',
       anos: '1999-',
-      episodios: '1060';
-      classificacao: '12';
-      cartaz: '.';
+      episodios: '1060',
+      classificacao: '12',
+      cartaz: '.',
       generos: ['Ação', 'Aventura', 'Fantasia', 'Comédia'],
-      pagina?: '/op',
-      favorito: 'false'
+      pagina: '/op',
+      favorito: false
     }
   ];
   exibirSerie(serie: ISerie){
