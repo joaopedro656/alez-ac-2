@@ -36,7 +36,7 @@ export class Tab2Page {
     }
   ];
   exibirSerie(serie: ISerie){
-    const navigationExtras: NavigationExtras = {state:{paramSeries:serie}};
+    const navigationExtras: NavigationExtras = {state:{paramSerie:serie}};
     this.router.navigate(['serie-detalhe'],navigationExtras);
   }
 
