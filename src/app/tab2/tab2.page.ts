@@ -46,7 +46,7 @@ export class Tab2Page {
     const alert = await this.alertController.create({
       
       header: 'Meus Favoritos',
-      message: 'Deseja realmente favoritar o filme?',
+      message: 'Deseja realmente favoritar a série?',
       buttons: [
         {
           text: 'Cancelar',

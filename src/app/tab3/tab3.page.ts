@@ -12,7 +12,7 @@ export class Tab3Page {
 
     constructor() {}
 
-    listaFilmes: IAtor[] = [
+    listaAtores: IAtor[] = [
         {
             nome: 'Marlon Brando',
             Nascimento: '03/04/1924',
@@ -34,4 +34,42 @@ export class Tab3Page {
             filmes_feitos: 'Lost in Translation, Vingadores, Lucy',
         }
     ];
+    exibirAtor(ator: IAtor){
+        const navigationExtras: NavigationExtras = {state:{paramAtores:ator}};
+        this.router.navigate(['ator-detalhe'],navigationExtras);
+      }
+    
+    
+      async exibirAlertaFavorito(ator: IAtor){
+        const alert = await this.alertController.create({
+          
+          header: 'Meus Favoritos',
+          message: 'Deseja realmente favoritar o ator?',
+          buttons: [
+            {
+              text: 'Cancelar',
+              role: 'cancel',
+              handler: () =>{
+                ator.favorito=false;
+              }
+            }, {
+              text: 'Sim, favoritar.',
+              handler: () => {
+                ator.favorito=true;
+                this.apresentarToast();
+              }
+            }
+          ]
+        });
+        await alert.present
+      }
+    
+      async apresentarToast() {
+        const toast = await this.toastController.create({
+          message: 'Ator adicionada aos favoritos...',
+          duration: 2000,
+          color: 'success'
+        });
+        toast.present();
+      }
 }
