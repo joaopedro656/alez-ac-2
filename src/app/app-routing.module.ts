@@ -5,7 +5,19 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },  {
+    path: 'serie-detalhe',
+    loadChildren: () => import('./serie-detalhe/serie-detalhe.module').then( m => m.SerieDetalhePageModule)
+  },
+  {
+    path: 'filme-detalhe',
+    loadChildren: () => import('./filme-detalhe/filme-detalhe.module').then( m => m.FilmeDetalhePageModule)
+  },
+  {
+    path: 'ator-detalhe',
+    loadChildren: () => import('./ator-detalhe/ator-detalhe.module').then( m => m.AtorDetalhePageModule)
   }
+
 ];
 @NgModule({
   imports: [

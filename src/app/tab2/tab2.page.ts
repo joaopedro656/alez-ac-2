@@ -9,9 +9,9 @@ import { ISerie } from '../model/ISerie'
 })
 export class Tab2Page {
 
-  constructor() {}
+  constructor(public router: Router) {}
 
-  listaSeries: ISerie[] = {
+  listaSeries: ISerie[] = [
     {
       nome: 'The Walking Dead',
       anos: '2010-2023',
@@ -32,5 +32,8 @@ export class Tab2Page {
       pagina?: '/op',
       favorito: 'false'
     }
+  ];
+  exibirSerie(serie: ISerie){
+    const navigation
   }
 }
